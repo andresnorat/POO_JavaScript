@@ -121,6 +121,38 @@ const camilo1 = {
     ],
 };
 
+class LearningPaths {
+    constructor(
+        {
+            name,
+            courses,
+        }
+    ){
+        this.name = name;
+        this.courses = courses;
+    }
+}
+
+
+const escuelaDesarrolloWeb = new LearningPaths({
+    name: 'Escuela de Desarrollo Web',
+    courses: [
+        "Curso Definitivo de HTML y CSS",
+        "Curso Practico de HTML y CSS",
+        "Curso de Responsive Desing"
+    ]
+});
+
+const escuelaDataScience = new LearningPaths({
+    name: 'Escuela de Data Science',
+    courses: [
+        "Curso Data Business",
+        "Curso DataViz",
+        "Curso Tableau"
+    ]
+});
+
+
 class Student {
     constructor({
         name,
@@ -161,5 +193,9 @@ const camilito2 = new Student({
     email: "camil@gmail.com",
     points: 15000,
     instagram: "@CamiloGomexz",
+    learningPaths: [
+        escuelaDesarrolloWeb,
+        escuelaDesarrolloWeb
+    ],
 });
 
