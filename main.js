@@ -24,8 +24,19 @@ class Course {
         name,
         clases = []
     }){
-        this.name = name;
+        this._name = name;
         this.clases = clases;
+    }
+
+    get name(){
+        return this._name; 
+    }
+
+    set name(newName){
+        if(newName === "Curso Malo"){
+            console.error('Web ... no')
+        }
+        this._name = newName;
     }
 }
 
@@ -82,17 +93,36 @@ class Student {
         approvedCourses = [],
         learningPaths = []
     }){
-        this.name = name,
-        this.email = email,
-        this.username = username,
+        this._name = name,
+        this._email = email,
+        this._username = username,
         this.points = points,
-        this.socialMedia = {
-            twitter,
-            instagram,
-            facebook
+        this._socialMedia = {
+            witter: twitter,
+            instagram: instagram,
+            facebook: facebook,
         }
         this.approvedCourses = approvedCourses,
         this.learningPaths = learningPaths
+    }
+    get name(){
+        return this._name;
+    }
+
+    get email(){
+        return this._email;
+    }
+
+    get username(){
+        return this._username;
+    }
+
+    get instagram(){
+        return this._socialMedia.instagram
+    }
+
+    set instagram(newInstagram){
+        this._socialMedia.instagram = newInstagram
     }
 }
 
